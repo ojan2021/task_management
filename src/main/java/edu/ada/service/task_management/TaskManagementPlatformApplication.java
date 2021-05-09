@@ -1,4 +1,4 @@
-package az.ada.service.task_management;
+package edu.ada.service.task_management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
