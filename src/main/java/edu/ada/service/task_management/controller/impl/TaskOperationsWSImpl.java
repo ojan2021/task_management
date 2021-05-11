@@ -4,6 +4,7 @@ import edu.ada.service.task_management.controller.TaskOperationsWS;
 import edu.ada.service.task_management.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -43,12 +44,15 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
                                      @RequestHeader("priority") String priority,
                                      @RequestHeader("task_status") String task_status) {
         taskService.createTask(title,description,start_date,end_date,priority,task_status);
-        return ResponseEntity.ok().build();
+        return new ResponseEntity<>("Created the task successfully", HttpStatus.ACCEPTED);
     }
 
     @Override
-    public ResponseEntity deleteTask(Long id) {
-        return null;
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity deleteTask(@RequestHeader("id") Long id) {
+        taskService.deleteTask(id);
+        return new ResponseEntity<>("Deleted the task successfully", HttpStatus.ACCEPTED);
     }
 
     @Override

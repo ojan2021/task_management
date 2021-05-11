@@ -20,4 +20,5 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Long> {
 //                    @Param(value = "end_date") String end_date,
 //                    @Param(value = "priority") String priority,
 //                    @Param(value = "task_status") String task_status);
+    
 }
