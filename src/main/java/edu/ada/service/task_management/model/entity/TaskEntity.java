@@ -39,6 +39,9 @@ public class TaskEntity {
     @Size(max = 20)
     private String task_status;
 
+    public TaskEntity(){
+    }
+
     public TaskEntity(String title, String description, String start_date, String end_date, String priority, String task_status) {
         this.title = title;
         this.description = description;
@@ -47,6 +50,7 @@ public class TaskEntity {
         this.priority = priority;
         this.task_status = task_status;
     }
+
 
     public Long getId() {
         return id;

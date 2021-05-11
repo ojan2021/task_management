@@ -1,17 +1,13 @@
 package edu.ada.service.task_management.controller;
 
+import edu.ada.service.task_management.model.entity.TaskEntity;
 import org.springframework.http.ResponseEntity;
 
 public interface TaskOperationsWS {
-
-    ResponseEntity listCategory();
-    ResponseEntity listBooks();
-    ResponseEntity listPickedUpBooks();
-    ResponseEntity pickUpBook(String title, String token);
-    ResponseEntity dropoffBook(String title);
-    ResponseEntity searchByCategory(String category);
     ResponseEntity searchByTitle(String title);
-    ResponseEntity searchByAuthor(String author);
-    ResponseEntity getBookByID(long book_id);
-    ResponseEntity listMetaData();
+    ResponseEntity searchById(Long id);
+    ResponseEntity createTask(String title, String description, String start_date, String end_date, String priority, String task_status);
+    ResponseEntity deleteTask(Long id);
+    ResponseEntity assignTask(String username);
+
 }
