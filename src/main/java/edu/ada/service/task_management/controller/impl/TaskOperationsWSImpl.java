@@ -1,6 +1,7 @@
 package edu.ada.service.task_management.controller.impl;
 
 import edu.ada.service.task_management.controller.TaskOperationsWS;
+import edu.ada.service.task_management.security.jwt.JwtUtils;
 import edu.ada.service.task_management.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,6 +20,9 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
     @Autowired
     @Qualifier(value = "TaskServiceImpl")
     TaskService taskService;
+
+    @Autowired
+    JwtUtils jwtUtils;
 
     @Override
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
@@ -85,8 +89,16 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
         return new ResponseEntity<>("Changed Task " + task_id + "'s status to " + task_status, HttpStatus.ACCEPTED);
     }
 
-//    @Override
-//    public ResponseEntity editProfile(String firstname, String lastname, String email, String birthday) {
-//        return null;
-//    }
+    @Override
+    @RequestMapping(value = "/edit_profile",method = RequestMethod.POST)
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public ResponseEntity editProfile(@RequestHeader("firstname") String firstname,
+                                      @RequestHeader("lastname") String lastname,
+                                      @RequestHeader("email") String email,
+                                      @RequestHeader("birthday") String birthday,
+                                      @RequestHeader("Authorization") String auth) {
+        auth = auth.substring(7);
+        taskService.editProfile(firstname,lastname,email,birthday,jwtUtils.getUserNameFromJwtToken(auth));
+        return new ResponseEntity<>("Edited the profile successfully", HttpStatus.ACCEPTED);
+    }
 }

@@ -13,6 +13,6 @@ public interface TaskOperationsWS {
     ResponseEntity assignTask(String username, Long task_id);
     ResponseEntity scheduleTask(Long task_id, String start_date, String end_date);
     ResponseEntity updateTaskStatus(Long task_id, String task_status);
-//    ResponseEntity editProfile(String firstname, String lastname, String email, String birthday);
+    ResponseEntity editProfile(String firstname, String lastname, String email, String birthday, String auth);
 
 }

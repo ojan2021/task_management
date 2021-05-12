@@ -57,8 +57,8 @@ public class TaskServiceImpl implements TaskService {
         taskRepository.updateTaskStatus(task_id,task_status);
     }
 
-//    @Override
-//    public void editProfile(String firstname, String lastname, String email, String birthday) {
-//
-//    }
+    @Override
+    public void editProfile(String firstname, String lastname, String email, String birthday, String username) {
+        taskRepository.editProfile(firstname,lastname,email,birthday,username);
+    }
 }
