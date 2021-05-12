@@ -39,16 +39,21 @@ public class TaskEntity {
     @Size(max = 20)
     private String task_status;
 
+    @NotBlank
+    @Size(max = 20)
+    private String assigned_to;
+
     public TaskEntity(){
     }
 
-    public TaskEntity(String title, String description, String start_date, String end_date, String priority, String task_status) {
+    public TaskEntity(String title, String description, String start_date, String end_date, String priority, String task_status, String assigned_to) {
         this.title = title;
         this.description = description;
         this.start_date = start_date;
         this.end_date = end_date;
         this.priority = priority;
         this.task_status = task_status;
+        this.assigned_to = task_status;
     }
 
 
@@ -106,5 +111,13 @@ public class TaskEntity {
 
     public void setTask_status(String task_status) {
         this.task_status = task_status;
+    }
+
+    public String getAssigned_to() {
+        return assigned_to;
+    }
+
+    public void setAssigned_to(String assigned_to) {
+        this.assigned_to = assigned_to;
     }
 }

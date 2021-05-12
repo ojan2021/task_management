@@ -34,6 +34,7 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
         return ResponseEntity.ok(taskService.searchById(id));
     }
 
+
     @Override
     @RequestMapping(value = "/create",method = RequestMethod.POST)
     @PreAuthorize("hasRole('ADMIN')")
@@ -42,8 +43,9 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
                                      @RequestHeader("start_date") String start_date,
                                      @RequestHeader("end_date") String end_date,
                                      @RequestHeader("priority") String priority,
-                                     @RequestHeader("task_status") String task_status) {
-        taskService.createTask(title,description,start_date,end_date,priority,task_status);
+                                     @RequestHeader("task_status") String task_status,
+                                     @RequestHeader("assigned_to") String assigned_to) {
+        taskService.createTask(title,description,start_date,end_date,priority,task_status,assigned_to);
         return new ResponseEntity<>("Created the task successfully", HttpStatus.ACCEPTED);
     }
 
@@ -56,7 +58,11 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
     }
 
     @Override
-    public ResponseEntity assignTask(String username) {
-        return null;
+    @RequestMapping(value = "/assign",method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity assignTask(@RequestHeader("username") String username,
+                                     @RequestHeader("task_id") Long task_id) {
+        taskService.assignTask(username,task_id);
+        return new ResponseEntity<>("Task " + task_id + " is assigned to " + username, HttpStatus.ACCEPTED);
     }
 }
