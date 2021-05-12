@@ -76,11 +76,15 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
         return new ResponseEntity<>("Task " + task_id + " is scheduled successfully", HttpStatus.ACCEPTED);
     }
 
-//    @Override
-//    public ResponseEntity updateTaskStatus(Long task_id, String task_status) {
-//        return null;
-//    }
-//
+    @Override
+    @RequestMapping(value = "/update_status",method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity updateTaskStatus(@RequestHeader("task_id") Long task_id,
+                                           @RequestHeader("task_status") String task_status) {
+        taskService.updateTaskStatus(task_id,task_status);
+        return new ResponseEntity<>("Changed Task " + task_id + "'s status to " + task_status, HttpStatus.ACCEPTED);
+    }
+
 //    @Override
 //    public ResponseEntity editProfile(String firstname, String lastname, String email, String birthday) {
 //        return null;

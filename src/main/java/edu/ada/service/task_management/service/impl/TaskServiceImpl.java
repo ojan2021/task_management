@@ -52,11 +52,11 @@ public class TaskServiceImpl implements TaskService {
         taskRepository.scheduleTask(task_id,start_date,end_date);
     }
 
-//    @Override
-//    public void updateTaskStatus(Long task_id, String task_status) {
-//
-//    }
-//
+    @Override
+    public void updateTaskStatus(Long task_id, String task_status) {
+        taskRepository.updateTaskStatus(task_id,task_status);
+    }
+
 //    @Override
 //    public void editProfile(String firstname, String lastname, String email, String birthday) {
 //
