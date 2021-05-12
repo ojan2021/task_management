@@ -65,4 +65,24 @@ public class TaskOperationsWSImpl implements TaskOperationsWS {
         taskService.assignTask(username,task_id);
         return new ResponseEntity<>("Task " + task_id + " is assigned to " + username, HttpStatus.ACCEPTED);
     }
+
+    @Override
+    @RequestMapping(value = "/schedule",method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity scheduleTask(@RequestHeader("task_id") Long task_id,
+                                       @RequestHeader("start_date") String start_date,
+                                       @RequestHeader("end_date") String end_date) {
+        taskService.scheduleTask(task_id,start_date,end_date);
+        return new ResponseEntity<>("Task " + task_id + " is scheduled successfully", HttpStatus.ACCEPTED);
+    }
+
+//    @Override
+//    public ResponseEntity updateTaskStatus(Long task_id, String task_status) {
+//        return null;
+//    }
+//
+//    @Override
+//    public ResponseEntity editProfile(String firstname, String lastname, String email, String birthday) {
+//        return null;
+//    }
 }

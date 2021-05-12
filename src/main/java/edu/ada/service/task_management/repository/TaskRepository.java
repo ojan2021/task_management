@@ -19,6 +19,19 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Long> {
     void assignTask(String username, Long task_id);
 
 
+    @Modifying
+    @Transactional
+    @Query("update TaskEntity t set t.start_date = :start_date, t.end_date = :end_date where t.id=:task_id")
+    void scheduleTask(Long task_id, String start_date, String end_date);
+
+
+
+//    void updateTaskStatus(Long task_id, String task_status);
+//
+//
+//    void editProfile(String firstname, String lastname, String email, String birthday);
+
+
 //    @Query(value = "insert into tasks(title, description, start_date, end_date, priority, task_status)\n" +
 //            " VALUES (:title,:description,:start_date,:end_date,:priority,:task_status)",nativeQuery = true)
 //    void createTask(@Param(value = "title") String title,

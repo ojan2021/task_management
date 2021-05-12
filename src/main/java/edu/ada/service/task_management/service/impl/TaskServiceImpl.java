@@ -46,4 +46,19 @@ public class TaskServiceImpl implements TaskService {
     public void assignTask(String username, Long task_id) {
         taskRepository.assignTask(username,task_id);
     }
+
+    @Override
+    public void scheduleTask(Long task_id, String start_date, String end_date) {
+        taskRepository.scheduleTask(task_id,start_date,end_date);
+    }
+
+//    @Override
+//    public void updateTaskStatus(Long task_id, String task_status) {
+//
+//    }
+//
+//    @Override
+//    public void editProfile(String firstname, String lastname, String email, String birthday) {
+//
+//    }
 }
