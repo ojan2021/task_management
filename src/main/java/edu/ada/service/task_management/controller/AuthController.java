@@ -67,7 +67,7 @@ public class AuthController {
                 roles));
     }
 
-    @PostMapping("/register")
+    @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody SignupRequest signUpRequest) {
         System.out.println(signUpRequest.getUsername());
 
