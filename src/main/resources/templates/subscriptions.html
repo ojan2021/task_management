@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscriptions</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 2;
+		--web-view-id: Web_1920__2;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920__2;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Web_1920__2 {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Web 1920 – 2;
+		--web-view-id: Web_1920__2;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#background {
+		position: absolute;
+		width: 1920px;
+		height: 851px;
+		left: 0px;
+		top: 229px;
+		overflow: visible;
+	}
+	#Component_1__2 {
+		position: absolute;
+		width: 1920px;
+		height: 229px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_1 {
+		fill: rgba(64,148,243,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1 {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 229px;
+		left: 0px;
+		top: 0px;
+	}
+	#Subscription_Options {
+		left: 650px;
+		top: 243px;
+		position: absolute;
+		overflow: visible;
+		width: 795px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 76px;
+		color: rgba(112,112,112,1);
+	}
+	#Rectangle_8 {
+		fill: rgba(64,148,243,1);
+		stroke: rgba(64,148,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_8 {
+		position: absolute;
+		overflow: visible;
+		width: 393px;
+		height: 642px;
+		left: 215px;
+		top: 391px;
+	}
+	#Path_1 {
+		fill: rgba(64,148,243,1);
+		stroke: rgba(64,148,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_1 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 642px;
+		left: 764px;
+		top: 391px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_11 {
+		fill: rgba(64,148,243,1);
+		stroke: rgba(64,148,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_11 {
+		position: absolute;
+		overflow: visible;
+		width: 393px;
+		height: 642px;
+		left: 1313px;
+		top: 391px;
+	}
+	#Line_1 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_1 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 1px;
+		left: 763.5px;
+		top: 477px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_2 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_2 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 1px;
+		left: 1313px;
+		top: 477px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_3 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_3 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 1px;
+		left: 215px;
+		top: 477px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Basic {
+		left: 344px;
+		top: 404px;
+		position: absolute;
+		overflow: visible;
+		width: 130px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 55px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3px;
+	}
+	#VIP {
+		left: 1460px;
+		top: 405px;
+		position: absolute;
+		overflow: visible;
+		width: 101px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 58px;
+		color: rgba(246,233,34,1);
+	}
+	#Line_4 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_4 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 1px;
+		left: 215px;
+		top: 913px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_5 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_5 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 1px;
+		left: 764px;
+		top: 913px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_6 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_6 {
+		overflow: visible;
+		position: absolute;
+		width: 393px;
+		height: 1px;
+		left: 1313px;
+		top: 913px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#FREE {
+		left: 350px;
+		top: 961px;
+		position: absolute;
+		overflow: visible;
+		width: 140px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 55px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3px;
+	}
+	#ID399month {
+		left: 855px;
+		top: 961px;
+		position: absolute;
+		overflow: visible;
+		width: 223px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 55px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3px;
+	}
+	#ID999month {
+		left: 1400px;
+		top: 961px;
+		position: absolute;
+		overflow: visible;
+		width: 210px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 55px;
+		color: rgba(246,233,34,1);
+	}
+	#Rectangle_12 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(64,148,243,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_12 {
+		position: absolute;
+		overflow: visible;
+		width: 393px;
+		height: 470px;
+		left: 1313px;
+		top: 477px;
+	}
+	#Rectangle_13 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(87,255,4,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_13 {
+		position: absolute;
+		overflow: visible;
+		width: 393px;
+		height: 470px;
+		left: 764px;
+		top: 478px;
+	}
+	#Rectangle_14 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(87,255,4,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_14 {
+		position: absolute;
+		overflow: visible;
+		width: 392px;
+		height: 470px;
+		left: 216px;
+		top: 478px;
+	}
+	#-_Up_to_3_projects_-_Up_to_5_t {
+		left: 231px;
+		top: 536px;
+		position: absolute;
+		overflow: visible;
+		width: 335px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(9,9,9,1);
+	}
+	#-_Up_to_20_projects_-_Up_to_50 {
+		left: 780px;
+		top: 536px;
+		position: absolute;
+		overflow: visible;
+		width: 350px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(9,9,9,1);
+	}
+	#-_No_limitations {
+		left: 1330px;
+		top: 536px;
+		position: absolute;
+		overflow: visible;
+		width: 191px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(9,9,9,1);
+	}
+	#Pro {
+		left: 920px;
+		top: 404px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 55px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3px;
+	}
+	#ID1619368247763 {
+		position: absolute;
+		width: 512px;
+		height: 253px;
+		left: 88px;
+		top: 0px;
+		overflow: visible;
+	}
+</style>
+
+</head>
+<body>
+<div id="Web_1920__2">
+	<img id="background" th:src="@{background.png}" src="../static/background.png" srcset="../static/backgroun../static/background@2x.pngund@2x.png 2x">
+		
+	<div id="Component_1__2" class="Component_1___2">
+		<svg class="Rectangle_1">
+			<rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="229">
+			</rect>
+		</svg>
+	</div>
+	<div id="Subscription_Options">
+		<span>Subscription Options</span>
+	</div>
+	<svg class="Rectangle_8">
+		<rect id="Rectangle_8" rx="78" ry="78" x="0" y="0" width="393" height="642">
+		</rect>
+	</svg>
+	<svg class="Path_1" viewBox="0 0 393 642">
+		<path id="Path_1" d="M 78 0 L 315 0 C 358.0782165527344 0 393 34.92178726196289 393 78 L 393 564 C 393 607.0781860351563 358.0782165527344 642 315 642 L 78 642 C 34.92178726196289 642 0 607.0781860351563 0 564 L 0 78 C 0 34.92178726196289 34.92178726196289 0 78 0 Z">
+		</path>
+	</svg>
+	<svg class="Rectangle_11">
+		<rect id="Rectangle_11" rx="78" ry="78" x="0" y="0" width="393" height="642">
+		</rect>
+	</svg>
+	<svg class="Line_1" viewBox="0 0 393 1">
+		<path id="Line_1" d="M 0 0 L 393 0">
+		</path>
+	</svg>
+	<svg class="Line_2" viewBox="0 0 393 1">
+		<path id="Line_2" d="M 0 0 L 393 0">
+		</path>
+	</svg>
+	<svg class="Line_3" viewBox="0 0 393 1">
+		<path id="Line_3" d="M 0 0 L 393 0">
+		</path>
+	</svg>
+	<div id="Basic">
+		<span>Basic</span>
+	</div>
+	<div id="VIP">
+		<span>VIP</span>
+	</div>
+	<svg class="Line_4" viewBox="0 0 393 1">
+		<path id="Line_4" d="M 0 0 L 393 0">
+		</path>
+	</svg>
+	<svg class="Line_5" viewBox="0 0 393 1">
+		<path id="Line_5" d="M 0 0 L 393 0">
+		</path>
+	</svg>
+	<svg class="Line_6" viewBox="0 0 393 1">
+		<path id="Line_6" d="M 0 0 L 393 0">
+		</path>
+	</svg>
+	<div id="FREE">
+		<span>FREE</span>
+	</div>
+	<div id="ID399month">
+		<span>$3.99</span><span style="font-size:30px;">/month</span>
+	</div>
+	<div id="ID999month">
+		<span>$9.99</span><span style="font-size:30px;">/month</span>
+	</div>
+	<svg class="Rectangle_12">
+		<rect id="Rectangle_12" rx="0" ry="0" x="0" y="0" width="393" height="470">
+		</rect>
+	</svg>
+	<svg class="Rectangle_13">
+		<rect id="Rectangle_13" rx="0" ry="0" x="0" y="0" width="393" height="470">
+		</rect>
+	</svg>
+	<svg class="Rectangle_14">
+		<rect id="Rectangle_14" rx="0" ry="0" x="0" y="0" width="392" height="470">
+		</rect>
+	</svg>
+	<div id="-_Up_to_3_projects_-_Up_to_5_t">
+		<span>- Up to 3 projects<br/>- Up to 5 team members <br/>- Up to 10 tasks per project </span>
+	</div>
+	<div id="-_Up_to_20_projects_-_Up_to_50">
+		<span>- Up to 20 projects<br/>- Up to 50 team members <br/>- Up to 100 tasks per project </span>
+	</div>
+	<div id="-_No_limitations">
+		<span>- No limitations</span>
+	</div>
+	<div id="Pro">
+		<span>Pro</span>
+	</div>
+	<img id="ID1619368247763" th:src="@{ID1619368247763.png}" src="../static/ID1619368247763.png" srcset="../static/ID161936824776../static/ID1619368247763@2x.png763@2x.png 2x">
+		
+</div>
+</body>
+</html>

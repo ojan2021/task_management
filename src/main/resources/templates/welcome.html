@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920__1;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Web_1920__1 {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#background {
+		position: absolute;
+		width: 1920px;
+		height: 851px;
+		left: 0px;
+		top: 229px;
+		overflow: visible;
+	}
+	#Component_1__1 {
+		position: absolute;
+		width: 1920px;
+		height: 229px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_1 {
+		fill: rgba(64,148,243,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1 {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 229px;
+		left: 0px;
+		top: 0px;
+	}
+
+	
+	
+	#ID1619368247763 {
+		position: absolute;
+		width: 512px;
+		height: 253px;
+		left: 88px;
+		top: 0px;
+		overflow: visible;
+	}
+	#About_us {
+		width: 395px;
+		height: 101px;
+		left: 986px;
+		top: 658px;
+		position: absolute;
+		overflow: visible;
+		width: 395px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		color: rgba(64,148,243,1);
+		background-color: white;
+		cursor:pointer;
+		padding: 20px;
+		border-radius: 16px;
+	}
+	#About_us:hover {
+		background-color: rgba(64,148,243,1);
+		color: white;
+	}
+	#Sign_Up {
+		left: 1673px;
+		top: 90px;
+		position: absolute;
+		overflow: visible;
+		width: 120px;
+		height: 60px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(112,112,112,1);
+		background-color: white;
+		border-radius: 16px;
+		cursor:pointer;
+	}
+	#Sign_Up:hover {
+		background-color: rgb(6, 62, 126);
+		color: white;
+	}
+	#See_subscriptions {
+		left: 565px;
+		width: 395px;
+		height: 101px;
+		top: 658px;
+		position: absolute;
+		overflow: visible;
+		width: 395px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		color: rgba(64,148,243,1);
+		background-color: white;
+		cursor:pointer;
+		padding: 20px;
+		border-radius: 16px;
+	}
+	#See_subscriptions:hover {
+		background-color: rgba(64,148,243,1);
+		color: white;
+	}
+	#Task_Management_System {
+		left: 480px;
+		top: 353px;
+		position: absolute;
+		overflow: visible;
+		width: 1176px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI Symbol;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 90px;
+		color: rgba(112,112,112,1);
+	}
+	#Log_In {
+		left: 1515px;
+		top: 90px;
+		position: absolute;
+		overflow: visible;
+		width: 120px;
+		height: 60px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(112,112,112,1);
+		background-color: white;
+		border-radius: 16px;
+		cursor:pointer;
+	}
+	#Log_In:hover {
+		background-color: rgb(6, 62, 126);
+		color: white;
+	}
+
+	#SignUp_Form {
+		border-radius: 5px;
+		background-color: rgba(64,148,243,1);
+		padding: 20px;
+		position: absolute;
+		margin-top: 350px;
+		margin-left: 780px;
+	}
+
+	#LogIn_Form {
+		border-radius: 5px;
+		background-color: rgba(64,148,243,1);
+		padding: 20px;
+		position: absolute;
+		margin-top: 350px;
+		margin-left: 780px;
+	}
+	input[type=submit] {
+		width: 100%;
+		color: rgba(112,112,112,1);
+		background-color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: large;
+	}
+
+	input[type=submit]:hover {
+		background-color: rgb(6, 62, 126);
+		color: white;;
+	}
+
+	
+</style>
+
+</head>
+<body>
+<div id="Web_1920__1">
+	<img id="background" th:src="@{background.png}" src="../static/background.png" srcset="../static/backgroun../static/background@2x.pngund@2x.png 2x">
+		
+	<div id="Component_1__1" class="Component_1___1">
+		<svg class="Rectangle_1">
+			<rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="229">
+			</rect>
+		</svg>
+	</div>
+
+
+	
+	<button onclick="showLoginForm()" id="Log_In" type="button">Login</button> -->
+
+	<form name="signup_data" id="LogIn_Form" style="display: none;" action="/auth/login" method="POST">
+		<ul>
+			<input style="font-size: 24px" placeholder="Username" type='text' name='username' /> <br><br>
+			<input style="font-size: 24px" placeholder="Password" type='password' name='password' /> <br><br>
+			<input type="submit" value="Log in">
+		</ul>
+	</form> -->
+
+	<button onclick="showSignupForm()" id="Sign_Up" type="button">Sign Up</button> -->
+	<form name="signup_data" id="SignUp_Form" style="display: none;" action="/auth/signup" method="POST">
+		<ul>
+			<input style="font-size: 24px" placeholder="Username" type='text' name='username' /> <br><br>
+			<input style="font-size: 24px" placeholder="E-mail" type='text' name='email' /> <br><br>
+			<input style="font-size: 24px" placeholder="Password" type='password' name='password' /> <br><br>
+			<input style="font-size: 24px" placeholder="First Name" type='text' name='firstname' /> <br><br>
+			<input style="font-size: 24px" placeholder="Last Name" type='text' name='lastname' /> <br><br>
+			<input style="font-size: 24px" placeholder="Birthday" type='text' name='birthday' /> <br><br>
+			<input style="font-size: 24px" placeholder="Role" type='text' name='role' /> <br><br>
+			<input type="submit" value="Sign Up">
+		</ul>
+	</form> -->
+
+
+	<div id="Task_Management_System">
+		<span>Task Management System</span>
+	</div>
+
+	<button onclick="location.href='subscriptions.html';"id="See_subscriptions" type="button">See subscriptions</button>
+	<button onclick="location.href='https://github.com/ojan2021/task_management';" id="About_us" type="button">About us</button>
+
+	<img id="ID1619368247763" th:src="@{ID1619368247763.png}" src="../static/ID1619368247763.png" srcset="../static/ID161936824776../static/ID1619368247763@2x.png763@2x.png 2x">
+		
+</div>
+</body>
+<script type="text/javascript">
+    function showLoginForm() {
+        document.getElementById('LogIn_Form').style.display = 'block';
+		document.getElementById('Task_Management_System').style.display = 'none';
+        document.getElementById('See_subscriptions').style.display = 'none';
+		document.getElementById('About_us').style.display = 'none';
+		document.getElementById('SignUp_Form').style.display = 'none';
+
+    }
+
+	function showSignupForm() {
+        document.getElementById('SignUp_Form').style.display = 'block';
+		document.getElementById('Task_Management_System').style.display = 'none';
+        document.getElementById('See_subscriptions').style.display = 'none';
+		document.getElementById('About_us').style.display = 'none';
+		document.getElementById('LogIn_Form').style.display = 'none';
+
+
+    }
+</script>
+</html>
